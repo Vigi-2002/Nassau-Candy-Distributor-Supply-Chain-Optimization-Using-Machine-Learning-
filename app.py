@@ -407,7 +407,7 @@ with tab3:
         return f"background-color: {c}"
 
     st.dataframe(
-        display_df.style.applymap(colour_risk, subset=['Risk']),
+        display_df.style.map(colour_risk, subset=['Risk']),
         use_container_width=True, height=380,
     )
 
