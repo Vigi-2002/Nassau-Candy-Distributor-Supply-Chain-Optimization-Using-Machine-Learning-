@@ -1,0 +1,14 @@
+Product ID,Product Name,Division,Current Factory,Alternate Factory,Current Avg LT (days),Simulated Avg LT (days),LT Reduction (days),LT Reduction (%),Current Avg Dist (mi),Simulated Avg Dist (mi),Distance Delta (mi),Avg Gross Profit ($),Profit Impact ($),Current Route Cluster,Alternate Route Cluster,Confidence Score,Risk,Order Count
+OTH-LIC-15000,Lickable Wallpaper,Other,Secret Factory,The Other Factory,1455.8,1335.2,120.5,8.28,639.6,791.3,-151.7,10.0,-1.21,Slow,Fastest,0.5909,High,4
+OTH-FIZ-56000,Fizzy Lifting,Sugar,Sugar Shack,The Other Factory,1273.5,1191.0,82.5,6.48,1032.6,776.4,256.2,7.88,3.07,Fastest,Fastest,0.441,High,6
+SUG-FUN-75000,Fun Dip,Sugar,Sugar Shack,The Other Factory,1272.7,1190.7,82.0,6.44,895.8,490.0,405.8,1.6,2.43,Fastest,Fastest,0.4553,High,3
+SUG-HAI-55000,Hair Toffee,Sugar,The Other Factory,Secret Factory,1455.2,1369.0,86.2,5.92,1094.3,1073.1,21.3,14.88,0.17,Fastest,Slow,0.2909,High,4
+SUG-SWE-91000,SweeTARTS,Sugar,Sugar Shack,The Other Factory,1383.5,1306.4,77.1,5.57,1096.9,823.5,273.5,2.87,5.47,Slow,Fastest,0.5951,Low,10
+SUG-LAF-25000,Laffy Taffy,Sugar,Sugar Shack,The Other Factory,1383.1,1306.2,76.9,5.56,1138.4,903.2,235.2,3.35,4.7,Slow,Fastest,0.5951,Low,10
+OTH-GUM-21000,Wonka Gum,Other,Secret Factory,The Other Factory,1311.1,1277.5,33.6,2.57,822.5,844.8,-22.3,2.39,-5.14,Slow,Fastest,0.6454,Low,115
+SUG-NER-92000,Nerds,Sugar,Sugar Shack,The Other Factory,1274.0,1262.7,11.3,0.89,1058.9,901.7,157.1,1.75,1.26,Slow,Fastest,0.5821,High,4
+CHO-NUT-13000,Nutty Crunch,Chocolate,Lot's O' Nuts,Secret Factory,1328.6,1318.5,10.1,0.76,1293.3,899.8,393.4,9.05,1406.95,Fast,Slow,0.5403,Low,1788
+CHO-TRI-54000,Triple Dazzle,Chocolate,Wicked Choccy's,Secret Factory,1325.7,1317.3,8.4,0.63,1168.9,920.8,248.1,8.53,954.75,Moderate,Slow,0.6153,Low,1924
+CHO-SCR-58000,Scrumdiddlyumptious,Chocolate,Lot's O' Nuts,Secret Factory,1321.3,1315.6,5.8,0.44,1305.2,923.0,382.2,9.02,1548.62,Fast,Slow,0.5406,Low,2026
+CHO-MIL-31000,Milk Chocolate,Chocolate,Wicked Choccy's,Secret Factory,1317.3,1314.0,3.3,0.25,1150.1,905.5,244.6,7.82,1025.08,Moderate,Slow,0.6154,Low,2095
+CHO-FUD-51000,Fudge Mallows,Chocolate,Lot's O' Nuts,Secret Factory,1315.1,1313.1,2.0,0.15,1326.3,909.8,416.5,8.48,1452.71,Fast,Slow,0.5404,Low,1744

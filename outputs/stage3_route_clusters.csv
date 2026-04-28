@@ -1,0 +1,21 @@
+Route,Factory,Region,Avg_Lead_Time,Lead_Time_Std,Avg_Distance,Avg_Gross_Profit,Order_Count,Cluster,Cluster_Label
+Lot's O' Nuts → Atlantic,Lot's O' Nuts,Atlantic,1327.61,255.42,2013.23,8.75,1617,4,Moderate
+Lot's O' Nuts → Gulf,Lot's O' Nuts,Gulf,1316.67,266.73,1661.87,8.81,875,4,Moderate
+Lot's O' Nuts → Interior,Lot's O' Nuts,Interior,1324.26,258.85,1130.35,9.16,1305,2,Fast
+Lot's O' Nuts → Pacific,Lot's O' Nuts,Pacific,1316.96,266.12,616.19,8.76,1761,2,Fast
+Secret Factory → Atlantic,Secret Factory,Atlantic,1332.35,265.93,719.76,3.18,37,0,Slow
+Secret Factory → Gulf,Secret Factory,Gulf,1349.58,322.89,744.17,2.68,24,0,Slow
+Secret Factory → Interior,Secret Factory,Interior,1272.9,303.66,445.67,2.76,30,0,Slow
+Secret Factory → Pacific,Secret Factory,Pacific,1311.75,286.88,1402.88,1.79,28,0,Slow
+Sugar Shack → Atlantic,Sugar Shack,Atlantic,1375.39,274.61,1073.45,3.54,18,0,Slow
+Sugar Shack → Gulf,Sugar Shack,Gulf,1091.25,210.45,1450.28,5.81,4,1,Fastest
+Sugar Shack → Interior,Sugar Shack,Interior,1318.62,235.26,823.46,2.92,8,1,Fastest
+Sugar Shack → Pacific,Sugar Shack,Pacific,1516.67,210.16,1253.77,3.6,3,3,Slowest
+The Other Factory → Atlantic,The Other Factory,Atlantic,1255.05,251.38,860.86,1.4,20,1,Fastest
+The Other Factory → Gulf,The Other Factory,Gulf,1317.75,305.1,425.16,1.44,8,0,Slow
+The Other Factory → Interior,The Other Factory,Interior,1136.0,272.08,490.16,0.62,8,1,Fastest
+The Other Factory → Pacific,The Other Factory,Pacific,1313.61,212.99,1597.37,2.43,18,1,Fastest
+Wicked Choccy's → Atlantic,Wicked Choccy's,Atlantic,1316.04,255.84,747.76,7.91,1161,2,Fast
+Wicked Choccy's → Gulf,Wicked Choccy's,Gulf,1310.75,260.0,339.52,8.36,644,2,Fast
+Wicked Choccy's → Interior,Wicked Choccy's,Interior,1326.21,266.17,901.34,7.97,920,2,Fast
+Wicked Choccy's → Pacific,Wicked Choccy's,Pacific,1327.8,266.22,2119.32,8.42,1294,4,Moderate

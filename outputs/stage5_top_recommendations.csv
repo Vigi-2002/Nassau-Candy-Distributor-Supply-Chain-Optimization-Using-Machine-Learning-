@@ -1,0 +1,14 @@
+Rank,Product ID,Product Name,Division,Current Factory,Alternate Factory,Current Avg LT (days),Simulated Avg LT (days),LT Reduction (days),LT Reduction (%),Distance Delta (mi),Avg Gross Profit ($),Profit Impact ($),Confidence Score,Current Route Cluster,Alternate Route Cluster,Recommendation Score,Risk,Order Count,Product Revenue ($)
+1,CHO-SCR-58000,Scrumdiddlyumptious,Chocolate,Lot's O' Nuts,The Other Factory,1321.3,1316.7,4.6,0.35,345.0,9.02,1397.94,0.7656,Fast,Fastest,0.5343,Low,2026,26312.4
+2,CHO-NUT-13000,Nutty Crunch,Chocolate,Lot's O' Nuts,The Other Factory,1328.6,1319.6,9.0,0.67,357.5,9.05,1278.49,0.7653,Fast,Fastest,0.5314,Low,1788,22667.55
+3,SUG-SWE-91000,SweeTARTS,Sugar,Sugar Shack,The Other Factory,1383.5,1306.4,77.1,5.57,273.5,2.87,5.47,0.5951,Slow,Fastest,0.5313,Low,10,61.5
+4,SUG-LAF-25000,Laffy Taffy,Sugar,Sugar Shack,The Other Factory,1383.1,1306.2,76.9,5.56,235.2,3.35,4.7,0.5951,Slow,Fastest,0.5307,Low,10,53.73
+5,CHO-FUD-51000,Fudge Mallows,Chocolate,Lot's O' Nuts,The Other Factory,1315.1,1314.2,0.9,0.07,376.8,8.48,1314.39,0.7654,Fast,Fastest,0.5079,Low,1744,22194.0
+6,CHO-TRI-54000,Triple Dazzle,Chocolate,Wicked Choccy's,The Other Factory,1325.7,1318.5,7.2,0.55,210.0,8.53,808.07,0.8403,Moderate,Fastest,0.4724,Low,1924,25110.0
+7,OTH-LIC-15000,Lickable Wallpaper,Other,Secret Factory,The Other Factory,1455.8,1335.2,120.5,8.28,-151.7,10.0,-1.21,0.5909,Slow,Fastest,0.4605,High,4,80.0
+8,CHO-MIL-31000,Milk Chocolate,Chocolate,Wicked Choccy's,The Other Factory,1317.3,1315.1,2.2,0.17,200.3,7.82,839.37,0.8404,Moderate,Fastest,0.4588,Low,2095,25249.25
+9,OTH-GUM-21000,Wonka Gum,Other,Secret Factory,The Other Factory,1311.1,1277.5,33.6,2.57,-22.3,2.39,-5.14,0.6454,Slow,Fastest,0.397,Low,115,528.75
+10,SUG-FUN-75000,Fun Dip,Sugar,Sugar Shack,The Other Factory,1272.7,1190.7,82.0,6.44,405.8,1.6,2.43,0.4553,Fastest,Fastest,0.338,High,3,12.0
+11,OTH-FIZ-56000,Fizzy Lifting,Sugar,Sugar Shack,The Other Factory,1273.5,1191.0,82.5,6.48,256.2,7.88,3.07,0.441,Fastest,Fastest,0.3365,High,6,78.75
+12,SUG-HAI-55000,Hair Toffee,Sugar,The Other Factory,Lot's O' Nuts,1455.2,1372.2,83.1,5.71,-40.0,14.88,-0.32,0.3659,Fastest,Fast,0.2799,High,4,76.5
+13,SUG-NER-92000,Nerds,Sugar,Sugar Shack,The Other Factory,1274.0,1262.7,11.3,0.89,157.1,1.75,1.26,0.5821,Slow,Fastest,0.1008,High,4,15.0

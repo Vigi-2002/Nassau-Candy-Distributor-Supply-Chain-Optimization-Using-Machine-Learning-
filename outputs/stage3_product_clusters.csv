@@ -1,0 +1,15 @@
+Product ID,Product Name,Factory,Division,Avg_Lead_Time,Lead_Time_Std,Avg_Distance,Avg_Gross_Profit,Total_Orders,Cluster,Cluster_Label
+CHO-FUD-51000,Fudge Mallows,Lot's O' Nuts,Chocolate,1315.15,264.19,1326.31,8.48,1744,2,Moderate
+CHO-MIL-31000,Milk Chocolate,Wicked Choccy's,Chocolate,1317.29,263.18,1150.11,7.82,2095,2,Moderate
+CHO-NUT-13000,Nutty Crunch,Lot's O' Nuts,Chocolate,1328.57,260.72,1293.29,9.05,1788,2,Moderate
+CHO-SCR-58000,Scrumdiddlyumptious,Lot's O' Nuts,Chocolate,1321.35,259.6,1305.15,9.02,2026,2,Moderate
+CHO-TRI-54000,Triple Dazzle,Wicked Choccy's,Chocolate,1325.68,261.21,1168.89,8.53,1924,2,Moderate
+OTH-FIZ-56000,Fizzy Lifting,Sugar Shack,Sugar,1273.5,326.69,1032.65,7.88,6,0,Fast
+OTH-GUM-21000,Wonka Gum,Secret Factory,Other,1311.13,291.96,822.46,2.39,115,0,Fast
+OTH-KAZ-38000,Kazookles,The Other Factory,Other,1251.1,249.69,978.3,0.57,50,0,Fast
+OTH-LIC-15000,Lickable Wallpaper,Secret Factory,Other,1455.75,212.18,639.62,10.0,4,4,Slowest
+SUG-FUN-75000,Fun Dip,Sugar Shack,Sugar,1272.67,2.08,895.83,1.6,3,3,Fastest
+SUG-HAI-55000,Hair Toffee,The Other Factory,Sugar,1455.25,209.88,1094.35,14.88,4,4,Slowest
+SUG-LAF-25000,Laffy Taffy,Sugar Shack,Sugar,1383.1,246.56,1138.42,3.35,10,1,Slow
+SUG-NER-92000,Nerds,Sugar Shack,Sugar,1274.0,422.04,1058.87,1.75,4,0,Fast
+SUG-SWE-91000,SweeTARTS,Sugar Shack,Sugar,1383.5,246.69,1096.92,2.87,10,1,Slow

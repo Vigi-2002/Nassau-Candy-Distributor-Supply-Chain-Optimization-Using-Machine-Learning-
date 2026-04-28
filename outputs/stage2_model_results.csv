@@ -1,0 +1,4 @@
+Band,Best Model,RMSE,MAE,R²,CV R²
+Short  (~908d),Gradient Boosting,0.9927,0.7927,0.6363,0.607
+Medium (~1273d),Random Forest,0.9807,0.8037,0.6745,0.6676
+Long   (~1638d),Gradient Boosting,1.0542,0.8626,0.6093,0.65

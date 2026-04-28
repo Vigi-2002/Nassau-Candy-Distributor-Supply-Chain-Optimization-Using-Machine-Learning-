@@ -1,0 +1,57 @@
+Product ID,Product Name,Division,Current Factory,Alternate Factory,Current Avg LT (days),Simulated Avg LT (days),LT Reduction (days),LT Reduction (%),Current Avg Dist (mi),Simulated Avg Dist (mi),Distance Delta (mi),Avg Gross Profit ($),Profit Impact ($),Current Route Cluster,Alternate Route Cluster,Confidence Score,Risk,Order Count
+CHO-FUD-51000,Fudge Mallows,Chocolate,Lot's O' Nuts,Wicked Choccy's,1315.1,1322.8,-7.6,-0.58,1326.3,1148.7,177.6,8.48,619.4,Fast,Moderate,0.6154,High,1744
+CHO-FUD-51000,Fudge Mallows,Chocolate,Lot's O' Nuts,Sugar Shack,1315.1,1436.1,-120.9,-9.19,1326.3,1107.7,218.6,8.48,762.41,Fast,Slowest,0.5404,High,1744
+CHO-FUD-51000,Fudge Mallows,Chocolate,Lot's O' Nuts,Secret Factory,1315.1,1313.1,2.0,0.15,1326.3,909.8,416.5,8.48,1452.71,Fast,Slow,0.5404,Low,1744
+CHO-FUD-51000,Fudge Mallows,Chocolate,Lot's O' Nuts,The Other Factory,1315.1,1314.2,0.9,0.07,1326.3,949.5,376.8,8.48,1314.39,Fast,Fastest,0.7654,Low,1744
+CHO-MIL-31000,Milk Chocolate,Chocolate,Wicked Choccy's,Lot's O' Nuts,1317.3,1317.1,0.2,0.02,1150.1,1326.2,-176.1,7.82,-737.67,Moderate,Fast,0.7654,Low,2095
+CHO-MIL-31000,Milk Chocolate,Chocolate,Wicked Choccy's,Sugar Shack,1317.3,1436.9,-119.6,-9.08,1150.1,1100.6,49.5,7.82,207.26,Moderate,Slowest,0.5404,High,2095
+CHO-MIL-31000,Milk Chocolate,Chocolate,Wicked Choccy's,Secret Factory,1317.3,1314.0,3.3,0.25,1150.1,905.5,244.6,7.82,1025.08,Moderate,Slow,0.6154,Low,2095
+CHO-MIL-31000,Milk Chocolate,Chocolate,Wicked Choccy's,The Other Factory,1317.3,1315.1,2.2,0.17,1150.1,949.8,200.3,7.82,839.37,Moderate,Fastest,0.8404,Low,2095
+CHO-NUT-13000,Nutty Crunch,Chocolate,Lot's O' Nuts,Wicked Choccy's,1328.6,1328.1,0.4,0.03,1293.3,1149.1,144.2,9.05,515.72,Fast,Moderate,0.6153,Low,1788
+CHO-NUT-13000,Nutty Crunch,Chocolate,Lot's O' Nuts,Sugar Shack,1328.6,1441.5,-112.9,-8.5,1293.3,1102.2,191.1,9.05,683.34,Fast,Slowest,0.5403,High,1788
+CHO-NUT-13000,Nutty Crunch,Chocolate,Lot's O' Nuts,Secret Factory,1328.6,1318.5,10.1,0.76,1293.3,899.8,393.4,9.05,1406.95,Fast,Slow,0.5403,Low,1788
+CHO-NUT-13000,Nutty Crunch,Chocolate,Lot's O' Nuts,The Other Factory,1328.6,1319.6,9.0,0.67,1293.3,935.8,357.5,9.05,1278.49,Fast,Fastest,0.7653,Low,1788
+CHO-SCR-58000,Scrumdiddlyumptious,Chocolate,Lot's O' Nuts,Wicked Choccy's,1321.3,1325.2,-3.9,-0.29,1305.2,1166.0,139.2,9.02,563.98,Fast,Moderate,0.6156,High,2026
+CHO-SCR-58000,Scrumdiddlyumptious,Chocolate,Lot's O' Nuts,Sugar Shack,1321.3,1438.6,-117.2,-8.87,1305.2,1114.3,190.8,9.02,773.23,Fast,Slowest,0.5406,High,2026
+CHO-SCR-58000,Scrumdiddlyumptious,Chocolate,Lot's O' Nuts,Secret Factory,1321.3,1315.6,5.8,0.44,1305.2,923.0,382.2,9.02,1548.62,Fast,Slow,0.5406,Low,2026
+CHO-SCR-58000,Scrumdiddlyumptious,Chocolate,Lot's O' Nuts,The Other Factory,1321.3,1316.7,4.6,0.35,1305.2,960.2,345.0,9.02,1397.94,Fast,Fastest,0.7656,Low,2026
+CHO-TRI-54000,Triple Dazzle,Chocolate,Wicked Choccy's,Lot's O' Nuts,1325.7,1320.5,5.2,0.39,1168.9,1284.3,-115.4,8.53,-444.01,Moderate,Fast,0.7653,Low,1924
+CHO-TRI-54000,Triple Dazzle,Chocolate,Wicked Choccy's,Sugar Shack,1325.7,1440.3,-114.6,-8.65,1168.9,1112.4,56.4,8.53,217.2,Moderate,Slowest,0.5403,High,1924
+CHO-TRI-54000,Triple Dazzle,Chocolate,Wicked Choccy's,Secret Factory,1325.7,1317.3,8.4,0.63,1168.9,920.8,248.1,8.53,954.75,Moderate,Slow,0.6153,Low,1924
+CHO-TRI-54000,Triple Dazzle,Chocolate,Wicked Choccy's,The Other Factory,1325.7,1318.5,7.2,0.55,1168.9,958.9,210.0,8.53,808.07,Moderate,Fastest,0.8403,Low,1924
+OTH-FIZ-56000,Fizzy Lifting,Sugar,Sugar Shack,Lot's O' Nuts,1273.5,1303.9,-30.4,-2.39,1032.6,1490.3,-457.7,7.88,-5.49,Fastest,Fast,0.366,High,6
+OTH-FIZ-56000,Fizzy Lifting,Sugar,Sugar Shack,Wicked Choccy's,1273.5,1305.2,-31.7,-2.49,1032.6,841.9,190.7,7.88,2.29,Fastest,Fast,0.366,High,6
+OTH-FIZ-56000,Fizzy Lifting,Sugar,Sugar Shack,Secret Factory,1273.5,1273.1,0.4,0.03,1032.6,702.3,330.4,7.88,3.96,Fastest,Slow,0.291,High,6
+OTH-FIZ-56000,Fizzy Lifting,Sugar,Sugar Shack,The Other Factory,1273.5,1191.0,82.5,6.48,1032.6,776.4,256.2,7.88,3.07,Fastest,Fastest,0.441,High,6
+OTH-GUM-21000,Wonka Gum,Other,Secret Factory,Lot's O' Nuts,1311.1,1321.0,-9.9,-0.75,822.5,1389.3,-566.8,2.39,-130.36,Slow,Moderate,0.5704,High,115
+OTH-GUM-21000,Wonka Gum,Other,Secret Factory,Wicked Choccy's,1311.1,1314.1,-2.9,-0.22,822.5,993.4,-170.9,2.39,-39.31,Slow,Fast,0.6454,High,115
+OTH-GUM-21000,Wonka Gum,Other,Secret Factory,Sugar Shack,1311.1,1349.7,-38.6,-2.94,822.5,1081.6,-259.1,2.39,-59.59,Slow,Slow,0.4954,High,115
+OTH-GUM-21000,Wonka Gum,Other,Secret Factory,The Other Factory,1311.1,1277.5,33.6,2.57,822.5,844.8,-22.3,2.39,-5.14,Slow,Fastest,0.6454,Low,115
+OTH-KAZ-38000,Kazookles,Other,The Other Factory,Lot's O' Nuts,1251.1,1297.0,-45.9,-3.67,978.3,1323.1,-344.8,0.57,-34.48,Fastest,Moderate,0.3182,High,50
+OTH-KAZ-38000,Kazookles,Other,The Other Factory,Wicked Choccy's,1251.1,1290.0,-38.9,-3.11,978.3,1170.4,-192.1,0.57,-19.21,Fastest,Fast,0.3932,High,50
+OTH-KAZ-38000,Kazookles,Other,The Other Factory,Sugar Shack,1251.1,1325.7,-74.6,-5.96,978.3,1171.5,-193.2,0.57,-19.32,Fastest,Slow,0.3182,High,50
+OTH-KAZ-38000,Kazookles,Other,The Other Factory,Secret Factory,1251.1,1299.8,-48.7,-3.89,978.3,971.5,6.8,0.57,0.68,Fastest,Slow,0.3182,High,50
+OTH-LIC-15000,Lickable Wallpaper,Other,Secret Factory,Lot's O' Nuts,1455.8,1378.7,77.0,5.29,639.6,1911.8,-1272.1,10.0,-10.18,Slow,Moderate,0.5159,High,4
+OTH-LIC-15000,Lickable Wallpaper,Other,Secret Factory,Wicked Choccy's,1455.8,1371.8,84.0,5.77,639.6,753.4,-113.8,10.0,-0.91,Slow,Fast,0.5909,High,4
+OTH-LIC-15000,Lickable Wallpaper,Other,Secret Factory,Sugar Shack,1455.8,1407.4,48.3,3.32,639.6,1007.3,-367.7,10.0,-2.94,Slow,Slow,0.4409,High,4
+OTH-LIC-15000,Lickable Wallpaper,Other,Secret Factory,The Other Factory,1455.8,1335.2,120.5,8.28,639.6,791.3,-151.7,10.0,-1.21,Slow,Fastest,0.5909,High,4
+SUG-FUN-75000,Fun Dip,Sugar,Sugar Shack,Lot's O' Nuts,1272.7,1303.7,-31.0,-2.44,895.8,1618.2,-722.3,1.6,-4.33,Fastest,Fast,0.3803,High,3
+SUG-FUN-75000,Fun Dip,Sugar,Sugar Shack,Wicked Choccy's,1272.7,1304.9,-32.2,-2.53,895.8,643.9,251.9,1.6,1.51,Fastest,Fast,0.3803,High,3
+SUG-FUN-75000,Fun Dip,Sugar,Sugar Shack,Secret Factory,1272.7,1272.8,-0.2,-0.01,895.8,443.6,452.2,1.6,2.71,Fastest,Slow,0.3053,High,3
+SUG-FUN-75000,Fun Dip,Sugar,Sugar Shack,The Other Factory,1272.7,1190.7,82.0,6.44,895.8,490.0,405.8,1.6,2.43,Fastest,Fastest,0.4553,High,3
+SUG-HAI-55000,Hair Toffee,Sugar,The Other Factory,Lot's O' Nuts,1455.2,1372.2,83.1,5.71,1094.3,1134.3,-40.0,14.88,-0.32,Fastest,Fast,0.3659,High,4
+SUG-HAI-55000,Hair Toffee,Sugar,The Other Factory,Wicked Choccy's,1455.2,1378.7,76.6,5.26,1094.3,1247.5,-153.1,14.88,-1.22,Fastest,Moderate,0.2909,High,4
+SUG-HAI-55000,Hair Toffee,Sugar,The Other Factory,Sugar Shack,1455.2,1492.0,-36.7,-2.53,1094.3,1228.4,-134.1,14.88,-1.07,Fastest,Slowest,0.2909,High,4
+SUG-HAI-55000,Hair Toffee,Sugar,The Other Factory,Secret Factory,1455.2,1369.0,86.2,5.92,1094.3,1073.1,21.3,14.88,0.17,Fastest,Slow,0.2909,High,4
+SUG-LAF-25000,Laffy Taffy,Sugar,Sugar Shack,Lot's O' Nuts,1383.1,1349.7,33.4,2.41,1138.4,1850.3,-711.9,3.35,-14.24,Slow,Moderate,0.5201,Low,10
+SUG-LAF-25000,Laffy Taffy,Sugar,Sugar Shack,Wicked Choccy's,1383.1,1342.8,40.3,2.91,1138.4,807.3,331.1,3.35,6.62,Slow,Fast,0.5951,Low,10
+SUG-LAF-25000,Laffy Taffy,Sugar,Sugar Shack,Secret Factory,1383.1,1352.6,30.5,2.21,1138.4,841.7,296.7,3.35,5.93,Slow,Slow,0.4451,Low,10
+SUG-LAF-25000,Laffy Taffy,Sugar,Sugar Shack,The Other Factory,1383.1,1306.2,76.9,5.56,1138.4,903.2,235.2,3.35,4.7,Slow,Fastest,0.5951,Low,10
+SUG-NER-92000,Nerds,Sugar,Sugar Shack,Lot's O' Nuts,1274.0,1306.3,-32.3,-2.54,1058.9,2046.8,-987.9,1.75,-7.9,Slow,Moderate,0.5071,High,4
+SUG-NER-92000,Nerds,Sugar,Sugar Shack,Wicked Choccy's,1274.0,1299.3,-25.3,-1.98,1058.9,761.1,297.8,1.75,2.38,Slow,Fast,0.5821,High,4
+SUG-NER-92000,Nerds,Sugar,Sugar Shack,Secret Factory,1274.0,1309.0,-35.0,-2.75,1058.9,753.5,305.4,1.75,2.44,Slow,Slow,0.4321,High,4
+SUG-NER-92000,Nerds,Sugar,Sugar Shack,The Other Factory,1274.0,1262.7,11.3,0.89,1058.9,901.7,157.1,1.75,1.26,Slow,Fastest,0.5821,High,4
+SUG-SWE-91000,SweeTARTS,Sugar,Sugar Shack,Lot's O' Nuts,1383.5,1350.0,33.5,2.42,1096.9,1479.7,-382.8,2.87,-7.66,Slow,Moderate,0.5201,Low,10
+SUG-SWE-91000,SweeTARTS,Sugar,Sugar Shack,Wicked Choccy's,1383.5,1343.0,40.5,2.92,1096.9,960.4,136.5,2.87,2.73,Slow,Fast,0.5951,Low,10
+SUG-SWE-91000,SweeTARTS,Sugar,Sugar Shack,Secret Factory,1383.5,1352.8,30.7,2.22,1096.9,809.2,287.7,2.87,5.75,Slow,Slow,0.4451,Low,10
+SUG-SWE-91000,SweeTARTS,Sugar,Sugar Shack,The Other Factory,1383.5,1306.4,77.1,5.57,1096.9,823.5,273.5,2.87,5.47,Slow,Fastest,0.5951,Low,10
