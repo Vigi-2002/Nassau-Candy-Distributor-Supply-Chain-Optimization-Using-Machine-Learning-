@@ -222,7 +222,7 @@ Python 3.9+
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/nassau-candy-optimization.git
+git clone https://github.com/Vigi-2002/Nassau-Candy-Distributor-Supply-Chain-Optimization-Using-Machine-Learning-/tree/main
 cd nassau-candy-optimization
 
 # Install dependencies
