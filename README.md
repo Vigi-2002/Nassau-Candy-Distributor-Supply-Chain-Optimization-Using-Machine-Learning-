@@ -1,65 +1,75 @@
 # 🍬 Nassau Candy — Supply Chain Optimization
-A five-stage machine learning pipeline that simulates factory-product reassignment scenarios, predicts lead times, and delivers ranked recommendations to reduce shipping distances and improve margins for Nassau Candy Distributor.
 
+> **A five-stage machine learning pipeline that simulates factory-product reassignment scenarios, predicts lead times, and delivers ranked recommendations to reduce shipping distances and improve margins for Nassau Candy Distributor.**
 
-📋 Table of Contents
+---
 
-Overview
-Pipeline Architecture
-Key Results
-Project Structure
-Getting Started
-Stage Breakdown
-Streamlit Dashboard
-Technologies Used
-Deliverables
+## 📋 Table of Contents
 
+- [Overview](#overview)
+- [Pipeline Architecture](#pipeline-architecture)
+- [Key Results](#key-results)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+- [Stage Breakdown](#stage-breakdown)
+- [Streamlit Dashboard](#streamlit-dashboard)
+- [Technologies Used](#technologies-used)
+- [Deliverables](#deliverables)
 
-Overview
-Nassau Candy Distributor operates 5 factories across the United States and distributes 14 candy products to customers across 4 geographic regions (Atlantic, Gulf, Interior, Pacific). Factory-product assignments were historically governed by static legacy rules — with no capability to simulate alternatives or quantify impact before execution.
+---
+
+## Overview
+
+Nassau Candy Distributor operates **5 factories** across the United States and distributes **14 candy products** to customers across 4 geographic regions (Atlantic, Gulf, Interior, Pacific). Factory-product assignments were historically governed by static legacy rules — with no capability to simulate alternatives or quantify impact before execution.
+
 This project delivers:
 
-A predictive model for shipping lead time (R² ≈ 0.64–0.67)
-A simulation engine generating 56 factory reassignment scenarios
-A ranked recommendation system covering 99.5% of product revenue
-An interactive Streamlit dashboard for real-time scenario exploration
+- A **predictive model** for shipping lead time (R² ≈ 0.64–0.67)
+- A **simulation engine** generating 56 factory reassignment scenarios
+- A **ranked recommendation system** covering 99.5% of product revenue
+- An **interactive Streamlit dashboard** for real-time scenario exploration
 
+## Pipeline Architecture
 
-Pipeline Architecture
 Raw Data (10,194 orders)
-        │
-        ▼
+│
+▼
+
 ┌─────────────────────────────────────────────────────────────┐
 │  Stage 1 — Data Preparation & Feature Engineering           │
 │  Factory mapping · Haversine distances · Encode & Scale     │
 │  Output: nassau_enriched.csv (9,783 rows × 31 columns)      │
 └─────────────────────┬───────────────────────────────────────┘
-                      │
-                      ▼
+│
+▼
+
 ┌─────────────────────────────────────────────────────────────┐
 │  Stage 2 — Predictive Modeling                               │
 │  Linear Regression · Random Forest · Gradient Boosting       │
-│  Per-band training (3 scheduling tiers) · R² ≈ 0.64–0.67     │
+│  Per-band training (3 scheduling tiers) · R² ≈ 0.64–0.67   │
 │  Output: stage2_band_models.pkl                              │
 └─────────────────────┬───────────────────────────────────────┘
-                      │
-                      ▼
+│
+▼
+
 ┌─────────────────────────────────────────────────────────────┐
 │  Stage 3 — Route & Product Clustering                        │
 │  KMeans (k=5) · Silhouette score selection                   │
 │  Identifies: slow routes · high-value inefficient products   │
 │  Output: stage3_route_clusters.csv · stage3_product_clusters │
 └─────────────────────┬───────────────────────────────────────┘
-                      │
-                      ▼
+│
+▼
+
 ┌─────────────────────────────────────────────────────────────┐
 │  Stage 4 — Scenario Simulation Engine                        │
 │  56 scenarios (14 products × 4 alternate factories)          │
 │  4 KPIs: LT reduction · Profit impact · Confidence · Coverage│
 │  Output: stage4_simulations.csv                              │
 └─────────────────────┬───────────────────────────────────────┘
-                      │
-                      ▼
+│
+▼
+
 ┌─────────────────────────────────────────────────────────────┐
 │  Stage 5 — Optimization & Recommendations                    │
 │  Weighted composite scoring · Ranked reassignment table      │
@@ -67,127 +77,104 @@ Raw Data (10,194 orders)
 │  Output: stage5_recommendations.csv                          │
 └─────────────────────────────────────────────────────────────┘
 
-Key Results
-MetricValueDataset9,783 orders · 14 products · 5 factories · 4 regionsBest model R²0.675 (Random Forest — Medium band)Model RMSE~1.0 day (within-band std = 1.7 days)Avg lead time reduction20.7 days (1.51%) — viable low-risk scenariosAvg profit impact$517 per product per yearAvg confidence score0.63 / 1.0Recommendation coverage99.5% of product revenue (8/14 products)
-Top Recommendations
-#ProductFromToLT ReductionScore1ScrumdiddlyumptiousLot's O' NutsThe Other Factory0.35%0.5342Nutty CrunchLot's O' NutsThe Other Factory0.67%0.5313SweeTARTSSugar ShackThe Other Factory5.57%0.531
-Key Findings
+---
 
-Sugar Shack → Pacific is the worst-performing route (avg 1,517 days — 196 days above portfolio mean)
-Hair Toffee ($14.88 avg GP) and Lickable Wallpaper ($10.00 avg GP) are the highest-priority reassignment candidates — high margin, slowest cluster
-Standard Class shipping is paradoxically faster than First Class — factory location matters more than ship mode
-The Other Factory (Tennessee) is the best alternate destination due to its central geographic position relative to Gulf and Interior regions
+## Key Results
 
+| Metric | Value |
+|---|---|
+| **Dataset** | 9,783 orders · 14 products · 5 factories · 4 regions |
+| **Best model R²** | 0.675 (Random Forest — Medium band) |
+| **Model RMSE** | ~1.0 day (within-band std = 1.7 days) |
+| **Avg lead time reduction** | 20.7 days (1.51%) — viable low-risk scenarios |
+| **Avg profit impact** | $517 per product per year |
+| **Avg confidence score** | 0.63 / 1.0 |
+| **Recommendation coverage** | 99.5% of product revenue (8/14 products) |
 
-Project Structure
+### Top Recommendations
+
+| # | Product | From | To | LT Reduction | Score |
+|---|---|---|---|---|---|
+| 1 | Scrumdiddlyumptious | Lot's O' Nuts | The Other Factory | 0.35% | 0.534 |
+| 2 | Nutty Crunch | Lot's O' Nuts | The Other Factory | 0.67% | 0.531 |
+| 3 | SweeTARTS | Sugar Shack | The Other Factory | 5.57% | 0.531 |
+
+### Key Findings
+
+- **Sugar Shack → Pacific** is the worst-performing route (avg 1,517 days — 196 days above portfolio mean)
+- **Hair Toffee** ($14.88 avg GP) and **Lickable Wallpaper** ($10.00 avg GP) are the highest-priority reassignment candidates — high margin, slowest cluster
+- **Standard Class** shipping is paradoxically faster than First Class — factory location matters more than ship mode
+- **The Other Factory** (Tennessee) is the best alternate destination due to its central geographic position relative to Gulf and Interior regions
+
+---
+
+## Project Structure
 nassau-candy-optimization/
+
 │
+
 ├── nassau_pipeline.py              # Full pipeline — Stages 1–5 in one file
+
 │
+
 ├── stages/                         # Individual stage scripts
+
 │   ├── stage1_data_preparation.py
+
 │   ├── stage1_eda_visualization.py
+
 │   ├── stage2_predictive_modeling.py
+
 │   ├── stage3_clustering.py
+
 │   ├── stage4_simulation.py
+
 │   └── stage5_recommendations.py
+
 │
+
 ├── app.py                          # Streamlit dashboard
+
 ├── requirements.txt                # Python dependencies
+
 │
+
 ├── data/                           # ← Place your CSV here
+
 │   └── Nassau_Candy_Distributor.csv
+
 │
+
 └── outputs/                        # Auto-generated by pipeline
-    ├── nassau_enriched.csv
-    ├── nassau_eda_dashboard.png
-    ├── stage2_band_models.pkl
-    ├── stage2_model_results.csv
-    ├── stage2_model_comparison.png
-    ├── stage3_route_clusters.csv
-    ├── stage3_product_clusters.csv
-    ├── stage3_clustering.png
-    ├── stage4_simulations.csv
-    ├── stage4_simulation.png
-    ├── stage5_recommendations.csv
-    ├── stage5_top_recommendations.csv
-    ├── stage5_recommendations.png
-    └── stage5_report.pkl
 
-Getting Started
-Prerequisites
-bashPython 3.9+
-Installation
-bash# Clone the repository
-git clone https://github.com/your-username/nassau-candy-optimization.git
-cd nassau-candy-optimization
+├── nassau_enriched.csv
 
-# Install dependencies
-pip install -r requirements.txt
-Run the Full Pipeline
-bash# Place your dataset in the project folder, then:
-python nassau_pipeline.py
-All 14 outputs are written to the outputs/ folder automatically.
-Run the Streamlit Dashboard
-bash# Copy pipeline outputs to the data/ folder first
-cp outputs/*.csv outputs/*.pkl data/
+├── nassau_eda_dashboard.png
 
-# Launch the app
-streamlit run app.py
-The app opens at http://localhost:8501
+├── stage2_band_models.pkl
 
-Stage Breakdown
-Stage 1 — Data Preparation & Feature Engineering
+├── stage2_model_results.csv
 
-Parses order and ship dates to compute Lead Time (target variable)
-Maps each product to its factory using the Nassau Candy factory-product correlation table
-Assigns factory and destination coordinates (US states + Canadian provinces)
-Computes shipping distance using the Haversine formula (no external library)
-Applies IQR-based outlier removal on financial columns
-Label encodes 6 categorical features and StandardScaler normalizes 9 numerical features
-Saves nassau_enriched.csv — the master dataset used by all downstream stages
+├── stage2_model_comparison.png
 
-Stage 2 — Predictive Modeling
-Key discovery: Lead times cluster into 3 bands (~908, ~1,273, ~1,638 days) exactly 365 days apart, corresponding to ship years 2027, 2028, 2029. Training across all bands gives R² ≈ 0 (the scheduling year, not any available feature, drives the bulk of variance). Training a separate model per band achieves R² ≈ 0.64–0.67.
-Three models evaluated per band:
-ModelRoleLinear RegressionBaselineRandom ForestNon-linear pattern detectionGradient BoostingMaximum accuracy
-Stage 3 — Route & Product Clustering
+├── stage3_route_clusters.csv
 
-KMeans clustering (k=5 selected via silhouette score, k=2 to k=6 evaluated)
-Routes clustered by: avg lead time, avg distance, avg gross profit, lead time std
-Products clustered by the same feature set aggregated at product level
-Cluster labels assigned by lead time rank: Fastest → Slowest
+├── stage3_product_clusters.csv
 
-Stage 4 — Scenario Simulation Engine
-For each product × alternate factory pair:
+├── stage3_clustering.png
 
-Recomputes Haversine distances from the new factory to all customer destinations
-Re-encodes the factory feature using the Stage 1 label encoder
-Re-scales numericals using the Stage 1 StandardScaler
-Predicts lead time using the correct Stage 2 per-band model
-Computes 4 KPIs: LT reduction, profit impact, confidence score, coverage
+├── stage4_simulations.csv
 
-Lead time estimate uses a blended approach (60% route cluster benchmark + 40% model prediction) to account for the model's 36% unexplained variance.
-Stage 5 — Optimization & Recommendations
-Scoring formula:
-Score = 0.40 × LT_reduction_norm
-      + 0.35 × Profit_impact_norm
-      + 0.25 × Confidence_score
-      − Risk_penalty  (Low=0, Medium=0.05, High=0.20)
-All metrics min-max normalized to [0, 1] before weighting. Weights are configurable in the Streamlit dashboard.
+├── stage4_simulation.png
 
-Streamlit Dashboard
-Four interactive tabs:
-TabDescription🏭 Factory OptimizerLead time & distance predictions across all factories for a selected product. Factory × Region heatmap.🔄 What-If ScenarioSide-by-side comparison of current vs alternate factory assignment.🏆 RecommendationsFull ranked table with live scoring driven by the Speed ↔ Profit priority slider.⚠️ Risk & ImpactHigh-risk warnings, profit impact chart, factory workload before/after.
-Sidebar controls: Product selector · Region filter · Ship mode filter · Speed ↔ Profit slider
+├── stage5_recommendations.csv
 
-Technologies Used
-CategoryToolsData manipulationpandas, numpyMachine learningscikit-learn (LinearRegression, RandomForestRegressor, GradientBoostingRegressor, KMeans, StandardScaler, LabelEncoder)Visualizationmatplotlib, seabornDashboardStreamlit, PlotlyDistance calculationHaversine formula (native Python — no external library)
+├── stage5_top_recommendations.csv
 
-Deliverables
-DeliverableDescriptionnassau_pipeline.pyComplete Stages 1–5 in one self-contained scriptapp.pyInteractive Streamlit dashboardResearch PaperEDA, methodology, findings, and recommendationsExecutive SummaryFor government/stakeholder audiencePersonal Learning GuideCode deep-dive, challenges, interview preparation
+├── stage5_recommendations.png
 
-Factory Reference
-FactoryLocationLatLonLot's O' NutsArizona, USA32.8819-111.7680Wicked Choccy'sGeorgia, USA32.0762-81.0884Sugar ShackMinnesota, USA48.1191-96.1812Secret FactoryIllinois, USA41.4463-90.5655The Other FactoryTennessee, USA35.1175-89.9711
+└── stage5_report.pkl
 
-Internship project — Nassau Candy Distributor · 2025
+---
+
+## Pipeline Architecture
