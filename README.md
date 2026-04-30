@@ -94,13 +94,11 @@ Raw Data (10,194 orders)
 
 ### Top Recommendations
 
-```
 | # | Product | From | To | LT Reduction | Score |
 |---|---|---|---|---|---|
 | 1 | Scrumdiddlyumptious | Lot's O' Nuts | The Other Factory | 0.35% | 0.534 |
 | 2 | Nutty Crunch | Lot's O' Nuts | The Other Factory | 0.67% | 0.531 |
 | 3 | SweeTARTS | Sugar Shack | The Other Factory | 5.57% | 0.531 |
-```
 
 ### Key Findings
 
@@ -167,13 +165,13 @@ nassau-candy-optimization/
 **Key discovery:** Lead times cluster into 3 bands (~908, ~1,273, ~1,638 days) exactly 365 days apart, corresponding to ship years 2027, 2028, 2029. Training across all bands gives R² ≈ 0 (the scheduling year, not any available feature, drives the bulk of variance). Training a separate model per band achieves R² ≈ 0.64–0.67.
 
 Three models evaluated per band:
-```
+
 | Model | Role |
 |---|---|
 | Linear Regression | Baseline |
 | Random Forest | Non-linear pattern detection |
 | Gradient Boosting | Maximum accuracy |
-```
+
 
 ### Stage 3 — Route & Product Clustering
 
@@ -206,14 +204,13 @@ All metrics min-max normalized to [0, 1] before weighting. Weights are configura
 ## Streamlit Dashboard
 
 Four interactive tabs:
-```
+
 | Tab | Description |
 |---|---|
 | 🏭 **Factory Optimizer** | Lead time & distance predictions across all factories for a selected product. Factory × Region heatmap. |
 | 🔄 **What-If Scenario** | Side-by-side comparison of current vs alternate factory assignment. |
 | 🏆 **Recommendations** | Full ranked table with live scoring driven by the Speed ↔ Profit priority slider. |
 | ⚠️ **Risk & Impact** | High-risk warnings, profit impact chart, factory workload before/after. |
-```
 
 **Sidebar controls:** Product selector · Region filter · Ship mode filter · Speed ↔ Profit slider
 
@@ -221,7 +218,6 @@ Four interactive tabs:
 
 ## Technologies Used
 
-```
 | Category | Tools |
 |---|---|
 | **Data manipulation** | pandas, numpy |
@@ -229,13 +225,11 @@ Four interactive tabs:
 | **Visualization** | matplotlib, seaborn |
 | **Dashboard** | Streamlit, Plotly |
 | **Distance calculation** | Haversine formula (native Python — no external library) |
-```
 
 ---
 
 ## Deliverables
 
-```
 | Deliverable | Description |
 |---|---|
 | `nassau_pipeline.py` | Complete Stages 1–5 in one self-contained script |
@@ -243,13 +237,11 @@ Four interactive tabs:
 | Research Paper | EDA, methodology, findings, and recommendations |
 | Executive Summary | For government/stakeholder audience |
 | Personal Learning Guide | Code deep-dive, challenges, interview preparation |
-```
 
 ---
 
 ## Factory Reference
 
-```
 | Factory | Location | Lat | Lon |
 |---|---|---|---|
 | Lot's O' Nuts | Arizona, USA | 32.8819 | -111.7680 |
@@ -257,7 +249,8 @@ Four interactive tabs:
 | Sugar Shack | Minnesota, USA | 48.1191 | -96.1812 |
 | Secret Factory | Illinois, USA | 41.4463 | -90.5655 |
 | The Other Factory | Tennessee, USA | 35.1175 | -89.9711 |
-```
+
+---
 
 ---
 
