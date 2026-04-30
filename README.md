@@ -4,13 +4,16 @@
 
 ---
 
+The app opens at: https://cbx6bzvebf2ktdk983dyev.streamlit.app/
+
+---
+
 ## 📋 Table of Contents
 
 - [Overview](#overview)
 - [Pipeline Architecture](#pipeline-architecture)
 - [Key Results](#key-results)
 - [Project Structure](#project-structure)
-- [Getting Started](#getting-started)
 - [Stage Breakdown](#stage-breakdown)
 - [Streamlit Dashboard](#streamlit-dashboard)
 - [Technologies Used](#technologies-used)
@@ -32,6 +35,7 @@ This project delivers:
 ## Pipeline Architecture
 
 Raw Data (10,194 orders)
+
 │
 
 ▼
@@ -207,48 +211,6 @@ nassau-candy-optimization/
 ├── stage5_recommendations.png
 
 └── stage5_report.pkl
-
----
-
-## Getting Started
-
-### Prerequisites
-
-```bash
-Python 3.9+
-```
-
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/Vigi-2002/Nassau-Candy-Distributor-Supply-Chain-Optimization-Using-Machine-Learning-/tree/main
-cd nassau-candy-optimization
-
-# Install dependencies
-pip install -r requirements.txt
-```
-
-### Run the Full Pipeline
-
-```bash
-# Place your dataset in the project folder, then:
-python nassau_pipeline.py
-```
-
-All 14 outputs are written to the `outputs/` folder automatically.
-
-### Run the Streamlit Dashboard
-
-```bash
-# Copy pipeline outputs to the data/ folder first
-cp outputs/*.csv outputs/*.pkl data/
-
-# Launch the app
-streamlit run app.py
-```
-
-The app opens at `http://localhost:8501`
 
 ---
 
