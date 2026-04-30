@@ -58,9 +58,9 @@ Raw Data (10,194 orders)
 │
 ▼
 ┌─────────────────────────────────────────────────────────────┐
-│  Stage 1 — Data Preparation & Feature Engineering           │
-│  Factory mapping · Haversine distances · Encode & Scale     │
-│  Output: nassau_enriched.csv (9,783 rows × 31 columns)      │
+│  Stage 1 — Data Preparation & Feature Engineering            │
+│  Factory mapping · Haversine distances · Encode & Scale      │
+│  Output: nassau_enriched.csv (9,783 rows × 31 columns)       │
 └─────────────────────┬───────────────────────────────────────┘
 │
 ▼
