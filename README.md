@@ -80,7 +80,6 @@ Raw Data (10,194 orders)
 
 ## Key Results
 
-```
 | Metric | Value |
 |---|---|
 | **Dataset** | 9,783 orders · 14 products · 5 factories · 4 regions |
@@ -90,7 +89,6 @@ Raw Data (10,194 orders)
 | **Avg profit impact** | $517 per product per year |
 | **Avg confidence score** | 0.63 / 1.0 |
 | **Recommendation coverage** | 99.5% of product revenue (8/14 products) |
-```
 
 ### Top Recommendations
 
