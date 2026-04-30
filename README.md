@@ -33,48 +33,81 @@ This project delivers:
 
 Raw Data (10,194 orders)
 │
+
 ▼
 
 ┌─────────────────────────────────────────────────────────────┐
+
 │  Stage 1 — Data Preparation & Feature Engineering           │
+
 │  Factory mapping · Haversine distances · Encode & Scale     │
+
 │  Output: nassau_enriched.csv (9,783 rows × 31 columns)      │
+
 └─────────────────────┬───────────────────────────────────────┘
+
 │
+
 ▼
 
 ┌─────────────────────────────────────────────────────────────┐
+
 │  Stage 2 — Predictive Modeling                               │
+
 │  Linear Regression · Random Forest · Gradient Boosting       │
-│  Per-band training (3 scheduling tiers) · R² ≈ 0.64–0.67   │
+
+│  Per-band training (3 scheduling tiers) · R² ≈ 0.64–0.67     │
+
 │  Output: stage2_band_models.pkl                              │
+
 └─────────────────────┬───────────────────────────────────────┘
+
 │
+
 ▼
 
 ┌─────────────────────────────────────────────────────────────┐
+
 │  Stage 3 — Route & Product Clustering                        │
+
 │  KMeans (k=5) · Silhouette score selection                   │
+
 │  Identifies: slow routes · high-value inefficient products   │
+
 │  Output: stage3_route_clusters.csv · stage3_product_clusters │
+
 └─────────────────────┬───────────────────────────────────────┘
+
 │
+
 ▼
 
 ┌─────────────────────────────────────────────────────────────┐
+
 │  Stage 4 — Scenario Simulation Engine                        │
+
 │  56 scenarios (14 products × 4 alternate factories)          │
+
 │  4 KPIs: LT reduction · Profit impact · Confidence · Coverage│
+
 │  Output: stage4_simulations.csv                              │
+
 └─────────────────────┬───────────────────────────────────────┘
+
 │
+
 ▼
 
 ┌─────────────────────────────────────────────────────────────┐
+
 │  Stage 5 — Optimization & Recommendations                    │
+
 │  Weighted composite scoring · Ranked reassignment table      │
+
 │  Factory workload analysis · Revenue coverage report         │
+
 │  Output: stage5_recommendations.csv                          │
+
 └─────────────────────────────────────────────────────────────┘
 
 ---
