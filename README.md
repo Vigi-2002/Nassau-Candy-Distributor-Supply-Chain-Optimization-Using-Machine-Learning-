@@ -38,27 +38,11 @@ Raw Data (10,194 orders)
 
 ┌─────────────────────────────────────────────────────────────┐
 
-│  Stage 1 — Data Preparation & Feature Engineering           │
+│  Stage 1 — Data Preparation & Feature Engineering           
 
-│  Factory mapping · Haversine distances · Encode & Scale     │
+│  Factory mapping · Haversine distances · Encode & Scale     
 
-│  Output: nassau_enriched.csv (9,783 rows × 31 columns)      │
-
-└─────────────────────┬───────────────────────────────────────┘
-
-│
-
-▼
-
-┌─────────────────────────────────────────────────────────────┐
-
-│  Stage 2 — Predictive Modeling                               │
-
-│  Linear Regression · Random Forest · Gradient Boosting       │
-
-│  Per-band training (3 scheduling tiers) · R² ≈ 0.64–0.67     │
-
-│  Output: stage2_band_models.pkl                              │
+│  Output: nassau_enriched.csv (9,783 rows × 31 columns)      
 
 └─────────────────────┬───────────────────────────────────────┘
 
@@ -68,29 +52,13 @@ Raw Data (10,194 orders)
 
 ┌─────────────────────────────────────────────────────────────┐
 
-│  Stage 3 — Route & Product Clustering                        │
+│  Stage 2 — Predictive Modeling                               
 
-│  KMeans (k=5) · Silhouette score selection                   │
+│  Linear Regression · Random Forest · Gradient Boosting       
 
-│  Identifies: slow routes · high-value inefficient products   │
+│  Per-band training (3 scheduling tiers) · R² ≈ 0.64–0.67     
 
-│  Output: stage3_route_clusters.csv · stage3_product_clusters │
-
-└─────────────────────┬───────────────────────────────────────┘
-
-│
-
-▼
-
-┌─────────────────────────────────────────────────────────────┐
-
-│  Stage 4 — Scenario Simulation Engine                        │
-
-│  56 scenarios (14 products × 4 alternate factories)          │
-
-│  4 KPIs: LT reduction · Profit impact · Confidence · Coverage│
-
-│  Output: stage4_simulations.csv                              │
+│  Output: stage2_band_models.pkl                              
 
 └─────────────────────┬───────────────────────────────────────┘
 
@@ -100,13 +68,45 @@ Raw Data (10,194 orders)
 
 ┌─────────────────────────────────────────────────────────────┐
 
-│  Stage 5 — Optimization & Recommendations                    │
+│  Stage 3 — Route & Product Clustering                        
 
-│  Weighted composite scoring · Ranked reassignment table      │
+│  KMeans (k=5) · Silhouette score selection                   
 
-│  Factory workload analysis · Revenue coverage report         │
+│  Identifies: slow routes · high-value inefficient products   
 
-│  Output: stage5_recommendations.csv                          │
+│  Output: stage3_route_clusters.csv · stage3_product_clusters 
+
+└─────────────────────┬───────────────────────────────────────┘
+
+│
+
+▼
+
+┌─────────────────────────────────────────────────────────────┐
+
+│  Stage 4 — Scenario Simulation Engine                        
+
+│  56 scenarios (14 products × 4 alternate factories)          
+
+│  4 KPIs: LT reduction · Profit impact · Confidence · Coverage
+
+│  Output: stage4_simulations.csv                              
+
+└─────────────────────┬───────────────────────────────────────┘
+
+│
+
+▼
+
+┌─────────────────────────────────────────────────────────────┐
+
+│  Stage 5 — Optimization & Recommendations                    
+
+│  Weighted composite scoring · Ranked reassignment table      
+
+│  Factory workload analysis · Revenue coverage report         
+
+│  Output: stage5_recommendations.csv                          
 
 └─────────────────────────────────────────────────────────────┘
 
@@ -297,10 +297,7 @@ Lead time estimate uses a **blended approach** (60% route cluster benchmark + 40
 
 Scoring formula:
 
-Score = 0.40 × LT_reduction_norm
-+ 0.35 × Profit_impact_norm
-+ 0.25 × Confidence_score
-− Risk_penalty  (Low=0, Medium=0.05, High=0.20)
+Score = 0.40 × LT_reduction_norm + 0.35 × Profit_impact_norm + 0.25 × Confidence_score − Risk_penalty  (Low=0, Medium=0.05, High=0.20)
 
 All metrics min-max normalized to [0, 1] before weighting. Weights are configurable in the Streamlit dashboard.
 
