@@ -210,4 +210,151 @@ nassau-candy-optimization/
 
 ---
 
-## Pipeline Architecture
+## Getting Started
+
+### Prerequisites
+
+```bash
+Python 3.9+
+```
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/nassau-candy-optimization.git
+cd nassau-candy-optimization
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+### Run the Full Pipeline
+
+```bash
+# Place your dataset in the project folder, then:
+python nassau_pipeline.py
+```
+
+All 14 outputs are written to the `outputs/` folder automatically.
+
+### Run the Streamlit Dashboard
+
+```bash
+# Copy pipeline outputs to the data/ folder first
+cp outputs/*.csv outputs/*.pkl data/
+
+# Launch the app
+streamlit run app.py
+```
+
+The app opens at `http://localhost:8501`
+
+---
+
+## Stage Breakdown
+
+### Stage 1 — Data Preparation & Feature Engineering
+- Parses order and ship dates to compute **Lead Time** (target variable)
+- Maps each product to its factory using the Nassau Candy factory-product correlation table
+- Assigns factory and destination coordinates (US states + Canadian provinces)
+- Computes **shipping distance** using the **Haversine formula** (no external library)
+- Applies IQR-based **outlier removal** on financial columns
+- **Label encodes** 6 categorical features and **StandardScaler normalizes** 9 numerical features
+- Saves `nassau_enriched.csv` — the master dataset used by all downstream stages
+
+### Stage 2 — Predictive Modeling
+
+**Key discovery:** Lead times cluster into 3 bands (~908, ~1,273, ~1,638 days) exactly 365 days apart, corresponding to ship years 2027, 2028, 2029. Training across all bands gives R² ≈ 0 (the scheduling year, not any available feature, drives the bulk of variance). Training a separate model per band achieves R² ≈ 0.64–0.67.
+
+Three models evaluated per band:
+
+| Model | Role |
+|---|---|
+| Linear Regression | Baseline |
+| Random Forest | Non-linear pattern detection |
+| Gradient Boosting | Maximum accuracy |
+
+### Stage 3 — Route & Product Clustering
+
+- **KMeans clustering** (k=5 selected via silhouette score, k=2 to k=6 evaluated)
+- Routes clustered by: avg lead time, avg distance, avg gross profit, lead time std
+- Products clustered by the same feature set aggregated at product level
+- Cluster labels assigned by lead time rank: Fastest → Slowest
+
+### Stage 4 — Scenario Simulation Engine
+
+For each product × alternate factory pair:
+1. Recomputes Haversine distances from the new factory to all customer destinations
+2. Re-encodes the factory feature using the Stage 1 label encoder
+3. Re-scales numericals using the Stage 1 StandardScaler
+4. Predicts lead time using the correct Stage 2 per-band model
+5. Computes 4 KPIs: **LT reduction**, **profit impact**, **confidence score**, **coverage**
+
+Lead time estimate uses a **blended approach** (60% route cluster benchmark + 40% model prediction) to account for the model's 36% unexplained variance.
+
+### Stage 5 — Optimization & Recommendations
+
+Scoring formula:
+
+Score = 0.40 × LT_reduction_norm
++ 0.35 × Profit_impact_norm
++ 0.25 × Confidence_score
+− Risk_penalty  (Low=0, Medium=0.05, High=0.20)
+
+All metrics min-max normalized to [0, 1] before weighting. Weights are configurable in the Streamlit dashboard.
+
+---
+
+## Streamlit Dashboard
+
+Four interactive tabs:
+
+| Tab | Description |
+|---|---|
+| 🏭 **Factory Optimizer** | Lead time & distance predictions across all factories for a selected product. Factory × Region heatmap. |
+| 🔄 **What-If Scenario** | Side-by-side comparison of current vs alternate factory assignment. |
+| 🏆 **Recommendations** | Full ranked table with live scoring driven by the Speed ↔ Profit priority slider. |
+| ⚠️ **Risk & Impact** | High-risk warnings, profit impact chart, factory workload before/after. |
+
+**Sidebar controls:** Product selector · Region filter · Ship mode filter · Speed ↔ Profit slider
+
+---
+
+## Technologies Used
+
+| Category | Tools |
+|---|---|
+| **Data manipulation** | pandas, numpy |
+| **Machine learning** | scikit-learn (LinearRegression, RandomForestRegressor, GradientBoostingRegressor, KMeans, StandardScaler, LabelEncoder) |
+| **Visualization** | matplotlib, seaborn |
+| **Dashboard** | Streamlit, Plotly |
+| **Distance calculation** | Haversine formula (native Python — no external library) |
+
+---
+
+## Deliverables
+
+| Deliverable | Description |
+|---|---|
+| `nassau_pipeline.py` | Complete Stages 1–5 in one self-contained script |
+| `app.py` | Interactive Streamlit dashboard |
+| Research Paper | EDA, methodology, findings, and recommendations |
+| Executive Summary | For government/stakeholder audience |
+| Personal Learning Guide | Code deep-dive, challenges, interview preparation |
+
+---
+
+## Factory Reference
+
+| Factory | Location | Lat | Lon |
+|---|---|---|---|
+| Lot's O' Nuts | Arizona, USA | 32.8819 | -111.7680 |
+| Wicked Choccy's | Georgia, USA | 32.0762 | -81.0884 |
+| Sugar Shack | Minnesota, USA | 48.1191 | -96.1812 |
+| Secret Factory | Illinois, USA | 41.4463 | -90.5655 |
+| The Other Factory | Tennessee, USA | 35.1175 | -89.9711 |
+
+---
+
+*Internship project — Nassau Candy Distributor · 2026*
