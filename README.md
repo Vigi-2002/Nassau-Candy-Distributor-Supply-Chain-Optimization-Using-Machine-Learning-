@@ -1,6 +1,25 @@
+<div align="center">
+
+<img src="https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
+<img src="https://img.shields.io/badge/scikit--learn-1.x-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white"/>
+<img src="https://img.shields.io/badge/Streamlit-1.x-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white"/>
+<img src="https://img.shields.io/badge/Plotly-5.x-3F4F75?style=for-the-badge&logo=plotly&logoColor=white"/>
+<img src="https://img.shields.io/badge/Pandas-2.x-150458?style=for-the-badge&logo=pandas&logoColor=white"/>
+
+<br/><br/>
+
 # 🍬 Nassau Candy — Supply Chain Optimization
 
 > **A five-stage machine learning pipeline that simulates factory-product reassignment scenarios, predicts lead times, and delivers ranked recommendations to reduce shipping distances and improve margins for Nassau Candy Distributor.**
+
+<br/>
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+![Status](https://img.shields.io/badge/Status-Complete-brightgreen?style=flat-square)
+![Internship](https://img.shields.io/badge/Type-Internship%20Project-blueviolet?style=flat-square)
+![Clusters](https://img.shields.io/badge/Clusters-K--Means%20k%3D4-orange?style=flat-square)
+
+</div>
 
 ---
 
