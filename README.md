@@ -17,7 +17,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 ![Status](https://img.shields.io/badge/Status-Complete-brightgreen?style=flat-square)
 ![Internship](https://img.shields.io/badge/Type-Internship%20Project-blueviolet?style=flat-square)
-![Clusters](https://img.shields.io/badge/Clusters-K--Means%20k%3D4-orange?style=flat-square)
+![Clusters](https://img.shields.io/badge/Clusters-K--Means%20k%3D5-orange?style=flat-square)
 
 </div>
 
